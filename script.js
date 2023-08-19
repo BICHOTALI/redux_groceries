@@ -45,6 +45,9 @@ const newGrocery = (e) => {
 }
 
 const renderList = (state) => {
+    while(list.firstChild) {
+        list.removeChild(list.firstChild)
+    }
     state.forEach(grocery => {
         let li = document.createElement('li')
         list.appendChild(li)
